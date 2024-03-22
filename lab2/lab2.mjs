@@ -117,6 +117,16 @@ function FilmLibrary() {
         })
     }
 
+    this.deleteWatchedFilm = (id)=>{
+        return new Promise((resolve, reject) => {
+            const sql = "DELETE FROM films WHERE id=?";
+            db.all(sql,[id],(err, rows) => {
+                if (err) reject(err);
+                resolve(true);
+            })
+        })
+    }
+
     this.sortByDate = (array) => {
         return [...array].sort((a, b) => {
             if (!b.watchDate) return -1;
@@ -130,5 +140,5 @@ const library = new FilmLibrary();
 // library.getAllWatchedBeforeDate(dayjs().format("YYYY-MM-DD")).then(e => console.log(e.toString()));
 // library.getGraterRating(5).then(e => console.log(e.toString()));
 // library.getFilmByString("a").then(e => console.log(e.toString()));
-library.getAllRatedFilms().then(e => console.log(e.toString()));
-
+// library.getAllRatedFilms().then(e => console.log(e.toString()));
+library.deleteWatchedFilm(1).then(e => console.log(e.toString()));
