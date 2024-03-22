@@ -29,14 +29,16 @@ let array=["i"]
 // const o=[new Obj("a",2),new Obj("b",4),new Obj("c",3)];
 // o.sort((a,b)=>
 //     a.num>b.num?1:-1 );
-// // o.sortBy
+// o.sortBy
 // console.log(o);
-// let a=[2,1,4,3]
-// a.sort((a,b)=>
-//         a-b)
+let a=[2,1,4,3]
+a.sort((a,b)=>
+        a-b)
 // console.log(a);
+let b=null
+if (!b) console.log("ciao")
 
-function Obj(num){
-    this.num=num && "coa"
-}
-console.log(new Obj());
+// function Obj(num){
+//     this.num=num && "coa"
+// }
+// console.log(new Obj());
