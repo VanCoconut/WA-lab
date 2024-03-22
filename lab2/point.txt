@@ -1,0 +1,18 @@
+a. Retrieve all the stored films and return a Promise that resolves to an array of Film objects.
+b. Retrieve all favorite films and return a Promise that resolves to an array of Film objects.
+c. Retrieve all films watched today and return a Promise that resolves to an array of Film objects.
+d. Retrieve films whose watch date is earlier than a given date (received as a parameter). Return a
+Promise that resolves to an array of Film objects.
+e. Retrieve films whose rating is greater than or equal to a given number (received as a parameter).
+Return a Promise that resolves to an array of Film objects.
+f. Retrieve films whose title contains a given string (received as a parameter). Return a Promise that
+resolves to an array of Film objects.
+
+1. sortByDate: returns a new array containing the Films within the FilmLibrary instance sorted in
+   ascending order of the watch date. The movies that the user has not already watched should be put at the
+   end. For example, after the sorting, the FilmLibrary shown in the previous exercise would look like:
+2. deleteFilm: deletes a Film from the FilmLibrary based on an Id received by parameter.
+ - resetWatchedFilms: deletes the Watch date of all the Films in the FilmLibrary.
+ - getRated: selects the films that do have a defined score. Only movies with an assigned score should be
+   returned, ordered by decreasing score. After filtering the Films Library shown in exercise 1, the method
+   should print:
